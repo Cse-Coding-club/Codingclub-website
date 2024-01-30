@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Ubuntu:ital,wght@1,500&display=swap');
+
+*{
+    font-family: 'Inconsolata', monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    color: #8c8c8f;
+    text-decoration: none;
+    font-style: none; 
+    scroll-behavior: smooth; 
+}
+
+html,body{
+    /* background-color: #171427; */
+}
+
+/* selection style */
+*::selection{
+    background-color: #171427;
+    color: #70d0f6;
+}
+
+/* scroll-bar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #4a4b4c;
+    border-radius: 40px;
+    transition: .2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #8e8c95;
+    border-radius: 40px;
+}
+
+/* _______________cursor______________ */
+/* .cursor{
+    width: 15px;
+    height: 15px;
+    background-color: #f5f5f6;
+    border-radius: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* _________________Loading Page______________ */
+.loadingPage{
+    object-fit: cover;
+}
+
+.loadvideo video{
+    display: flex;
+}
+
+
+/* _________________container1______________ */
+.container1 {
+    position: relative;
+}
+
+/* _________________Navbar________________ */
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    z-index: 10;
+    border: 1px solid blue
+}
+
+.navbar .logo img{
+    height: 8vw;
+    width: auto;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 5px solid black;
+}
+
+.navbar .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-size: 1.6vw;
+    border: 5px solid red;
+}
+
+.navbar .nav a{
+    width: 100%;
+    color: #447f96;
+    /* color: #4a4b4c; */
+    font-weight: 600;
+    padding: 10px;
+    border: 5px solid green;
+    transition: color .3s ease-in;
+}
+
+.nav a:hover{
+    color: #c2c2c3;
+}
+
+
+.navbar i{
+    display: none;
+}
+/* _________________section1________________ */
+.section1{
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/bg.jpg') no-repeat center center/cover;
+    padding: 0 8rem;
+}
+
+.section1 h1 {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+}
+
+/* _____________Section2__________ */
+
+.section2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8e8c95;
+    border: 10px solid red;
+}
+
+.main {
+    width: 80%;
+    /* background-color: #333; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 5px solid blue; */
+}
+
+
+.mainLeft{
+    width: 100%;
+    height: auto;
+}
+
+.mainLeft img{
+    width: 23vw;
+    height: auto;
+    border-radius: 100%;
+    border: 11px solid #4a4b4c;
+}
+
+.mainRight{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.mainRight .lineBreak{
+    margin: 0 0 5vh 0;
+    border: 1px solid red;
+}
+
+
+.mainRight .pOne,.pTwo{
+    font-size: 2vw;
+}
+
+
+.mainRight .explore{
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.explore a{
+    padding: 10px;
+    font-size: 2vw;
+    border-radius: 1vw;
+    color: white;
+    background-color: #8c8c8f; 
+    transition: .2s ease-in;
+}
+
+.explore a:hover{
+    background-color: #f5f5f6;
+    color: #70d0f6; /*need to change to a good color*/
+}
+
+
+
+/* _____________Section3__________ */
+
+.section3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid green;
+}
+
+.section3 .upcoming{ 
+    height:80vh;
+    width: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 10px yellow solid;
+    
+}
+
+.section3 .upcoming .eveImage{
+    width: 50%;
+    height: 50%;
+
+}
+
+.section3 .upcoming .eveImage img{
+    /* object-fit: cover; */
+    background-color: red; 
+    border: 10px white solid;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+/* _____________Section4__________ */
+
+
+.section4{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid pink;
+}
+
+.staffBox{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px red solid;
+}
+
+.boxContainer{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid blue;
+}
+
+.staff1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 10px solid gold;
+}
+
+.staff1 .box{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid green;
+}
+
+
+.staff1 .content{
+    height: 100%;
+    width: 60%;
+    border: 10px solid lightblue;
+}
+
+.staff{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 10px solid gold;
+}
+
+
+
+
+
+
+
+
+
+

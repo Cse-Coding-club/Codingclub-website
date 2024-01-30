@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Image Slider</title>
+    <link rel="stylesheet" href="temp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+<div class="topnav">
+    <a href=""><i class="fa-duotone fa-m"></i></a>
+    <a class="active" href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+</div>
+  
+  <div class="notes">
+    <h1><span>Memory Diary </span></h1><br>
+    <h2> <span> Memories are the echoes of our yesterdays, etched in the canvas of our hearts. They remind us of the laughter, the tears, and the moments that have shaped our souls. In the tapestry of life, memories are the threads that never fade, weaving a story of who we are and where we've been.</span></h2>
+  </div>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="tempImage.webp" id="content1" class="active">
+            <img src="coding club logo.jpg" id="content2">
+            <img src="bg.jpg" id="content3">
+            <img src="loader.gif" id="content4">
+        </div>
+        <div class="dot-container">
+            <button onclick = "dot(1)"></button>
+            <button onclick = "dot(2)"></button>
+            <button onclick = "dot(3)"></button>
+            <button onclick = "dot(4)"></button>
+        </div>
+        <button id="prev" onclick="prev()"> &lt; </button>
+        <button id="next" onclick="next()"> &gt; </button>
+    </div>
+    <script >
+    let i = 0; // current slide
+    let j = 4; // total slides
+
+    const dots = document.querySelectorAll(".dot-container button");
+    const images = document.querySelectorAll(".image-container img");
+
+    function next(){
+        document.getElementById("content" + (i+1)).classList.remove("active");
+        i = ( j + i + 1) % j;
+        document.getElementById("content" + (i+1)).classList.add("active");
+        indicator( i+ 1 );
+    }
+
+    function prev(){
+        document.getElementById("content" + (i+1)).classList.remove("active");
+        i = (j + i - 1) % j;
+        document.getElementById("content" + (i+1)).classList.add("active");
+        indicator(i+1);
+    }
+
+    function indicator(num){
+        dots.forEach(function(dot){
+            dot.style.backgroundColor = "transparent";
+        });
+        document.querySelector(".dot-container button:nth-child(" + num + ")").style.backgroundColor = "#8052ec";
+    }
+
+    function dot(index){
+        images.forEach(function(image){
+            image.classList.remove("active");
+        });
+        document.getElementById("content" + index).classList.add("active");
+        i = index - 1;
+        indicator(index);
+    }
+    </script>
+
+
+
+
+</body>
+
+
+
+</html>
